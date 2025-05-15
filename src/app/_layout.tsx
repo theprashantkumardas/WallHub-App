@@ -1,13 +1,9 @@
-import { Stack } from "expo-router";
-
+// src/app/_layout.tsx
+import { Slot } from 'expo-router';
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native'; // Needed at the root
-import MainTabNavigator from '../navigation/MainTabNavigator'; // Adjust path if needed
 
-export default function App() {
-  return (
-    <NavigationContainer>
-      <MainTabNavigator />
-    </NavigationContainer>
-  );
+// This could be used for global providers, modals, etc.
+// For now, it just renders the child route (which will be the Tabs layout).
+export default function RootLayout() {
+  return <Slot />;
 }
